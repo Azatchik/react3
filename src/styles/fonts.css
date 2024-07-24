@@ -1,0 +1,14 @@
+@font-face {
+    font-family: MainBold;
+    src: url("./../assets/fonts/MainBold.ttf");
+}
+
+@font-face {
+    font-family: MainLight;
+    src: url("./../assets/fonts/MainLight.ttf");
+}
+
+@font-face {
+    font-family: MainMedium;
+    src: url("./../assets/fonts/MainMedium.ttf");
+}

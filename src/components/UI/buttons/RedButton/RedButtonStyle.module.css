@@ -1,0 +1,19 @@
+.redButton {
+    font-size: 18px;
+    font-family: MainMedium;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 15px 35px;
+    display: inline;
+    user-select: none;
+    text-decoration: none;
+}
+
+.redButton:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.redButton:active {
+    transform: scale(0.98);
+}

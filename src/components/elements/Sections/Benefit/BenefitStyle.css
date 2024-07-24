@@ -1,0 +1,204 @@
+.benefit {
+    height: 750px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/*СЛАЙДЫР*/
+
+.slideText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.slideTag {
+    color: white;
+    font-size: 14px;
+    font-family: MainLight;
+    background-color: rgba(19, 61, 141, 1);
+    padding: 5px 10px;
+}
+
+.slideTitle {
+    color: rgba(51, 51, 51, 1);
+    font-family: MainBold;
+    font-size: 22px;
+}
+
+.slideSubtitle {
+    color: rgba(51, 51, 51, 1);
+    font-family: MainLight;
+    font-size: 14px;
+    width: 350px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.slideSubtitle::before {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    content: '■';
+    font-size: 20px;
+    color: red;
+    top: -6px;
+    left: -20px;
+}
+
+/*АНИМАЦИЯ СЛАЙДЫР*/
+
+.benefitSlideStandartActive {
+    width: 65%;
+    height: 70%;
+    background: rgba(225, 229, 250, 1);
+    padding: 50px 60px;
+    justify-content: space-between;
+    margin-inline: 40px;
+    display: flex;
+    position: absolute;
+}
+
+.benefitSlideStandart {
+    display: none;
+}
+
+.benefitSlideRight,
+.benefitSlideLeft,
+
+.benefitSlideRightActive,
+.benefitSlideLeftActive {
+    width: 65%;
+    height: 70%;
+    background: rgba(225, 229, 250, 1);
+    padding: 50px 60px;
+    justify-content: space-between;
+    margin-inline: 40px;
+    display: flex;
+    position: absolute;
+}
+
+.benefitSlideDelete {
+    display: none;
+}
+
+
+.benefitSlideRight {
+    left: 15%;
+    animation: removeRight 1s ease-out forwards;
+}
+
+.benefitSlideLeft {
+    right: 15%;
+    animation: removeLeft 1s ease-out forwards;
+}
+
+
+.benefitSlideRightActive {
+    left: -40%;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: addRight 1s .5s ease-out forwards;
+}
+
+.benefitSlideLeftActive {
+    right: -40%;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: addLeft 1s .5s ease-out forwards;
+}
+
+
+
+/*Удаления*/
+@keyframes removeRight {
+    0 % {
+        left: 15%;
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(0.9);
+        left: 15%;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+
+@keyframes removeLeft {
+    0 % {
+        right: 15%;
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(0.9);
+        right: 15%;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        right: 100%;
+        opacity: 0;
+    }
+}
+
+
+/*Появления*/
+@keyframes addRight {
+    0 % {
+        left: -40%;
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    70% {
+        left: 15%;
+        opacity: 1;
+        transform: scale(0.9);
+    }
+
+    100% {
+        left: 15%;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes addLeft {
+    0 % {
+        right: -40%;
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    70% {
+        right: 15%;
+        opacity: 1;
+        transform: scale(0.9);
+    }
+
+    100% {
+        right: 15%;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+

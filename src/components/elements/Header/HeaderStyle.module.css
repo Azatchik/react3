@@ -1,0 +1,172 @@
+/*ВЕРХНЯЯ ПАНЕЛЬ С КОНТАКТАМИ И ПОИСКОМ*/
+.navigator {
+    width: 100%;
+    height: 130px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-block: 10px;
+}
+
+.navigator > hr {
+    width: 70%;
+    border-top: solid 0 rgba(255, 255, 255, 0.5);
+}
+
+
+/*Верхняя часть с телефоном и т.д.*/
+.navInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 70%;
+}
+
+.navLogo {
+    width: 80px;
+    transition: 1s linear;
+    user-select: none;
+}
+
+.navLogo:hover {
+    transform: scale(1.05);
+}
+
+.navContacts {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    font-family: MainLight;
+    font-size: 14px;
+    align-items: center;
+}
+
+.navSearch {
+    padding: 6px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.navSearch:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.3);
+}
+
+/*Стили кнопки поиска и инпута когда уже нажали на кнопку*/
+
+/*Уменьшаем кнопку после нажатия чтобы уменьшить фон под размер инпута, но увеличиваем не маргин,
+для восстановления расстояния между элементами, это не нужно, так как позиция абсолют от род элемента*/
+.navSearchClicked {
+    padding: 9px;
+    border-radius: 50%;
+    z-index: 300;
+    position: absolute;
+    user-select: none;
+    right: 0;
+}
+
+.navSearchClicked:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navSearchClicked:active {
+    transform: scale(0.95);
+}
+
+.searchForm {
+    position: relative;
+    /*Размера у формы по-умолчанию нет, но тут они были выданы чтобы после нажатия
+    на кнопку поиска она занимала место во флексе вместо кнопки поиска до нажатия,
+    так как кнопка оказывается внутри формы после нажатия, размер формы выдан такой же,
+    как был и у кнопки до нажатия. Вместо кнопки приходит таким образом форма с кнопкой*/
+    width: 35px;
+    height: 35px;
+}
+
+.searchInput {
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    width: 50px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px 37px 10px 10px;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    caret-color: white;
+
+    animation: newSearch .3s linear 0s forwards;
+}
+
+.searchInput::placeholder {
+    color: rgba(44, 44, 44, 0.47);
+}
+
+@keyframes newSearch {
+    0% {
+        width: 35px;
+    }
+    100% {
+        width: 250px;
+    }
+}
+
+
+
+/*НИЖНЯЯ ПАНЕЛЬ С ССЫЛКАМИ*/
+.navPanel {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.navPanel > li > a {
+    font-family: MainMedium;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    user-select: none;
+}
+
+
+/*Анимация подчеркивания*/
+.navPanel > li {
+    position: relative;
+}
+
+/*Создаем рядом микроскопический белый див с высотой 2px и получается как линия, стандартно
+ширины нет и его не видно. Как работает анимация, изначально этот див стоит в центре и при наведении
+мы увеличиваем ширину этого дива и двигаем его налево компенсируя его ширину справа, двигаем его налево
+и растет ширина направо, так как он стоит от левой стороны left 50%. Двигаем налево и добавляем ширину и
+появляется иллюзия что он растет в две стороны с середины*/
+.navPanel > li::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: -5px;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .2s linear;
+    opacity: 0;
+}
+
+.navPanel > li:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    filter: brightness(500%);
+}
+
+.navPanel > li:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}

@@ -1,0 +1,154 @@
+.carousel {
+    display: flex;
+    width: 70%;
+    height: 720px;
+    padding-top: 200px;
+}
+
+/*Оглавнение с кнопками*/
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.headingMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 60%;
+}
+
+.headingTitle {
+    color: white;
+    font-size: 62px;
+    font-family: MainLight;
+    font-weight: lighter;
+    line-height: 130%;
+}
+
+.headingDescription {
+    color: white;
+    font-size: 19px;
+    border: 0;
+    border-left: 2px solid white;
+    padding-left: 15px;
+    padding-right: 150px;
+}
+
+.carouselButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    padding-top: 80px;
+}
+
+
+/*Стили таблицы с картинкой*/
+.carouselTableBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.carouselTable {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: rgba(51, 51, 51, 0.3);
+    width: 500px;
+    height: 230px;
+}
+
+.carouselTable > p {
+    font-family: MainBold;
+    font-size: 17px;
+}
+
+.tableDate {
+    display: flex;
+    align-items: center;
+    height: 140px;
+}
+
+.tableDate > ul {
+    list-style: none;
+}
+
+.tableDate > ul > li {
+    font-size: 16px;
+    font-family: MainLight;
+    padding-bottom: 15px;
+}
+
+.tableDate > img {
+    padding-bottom: 18px;
+    padding-left: 15px;
+    transform: scale(1.1);
+}
+
+/*Анимация оглавления*/
+
+
+.headingAnim0,
+.headingAnim1,
+.headingAnim2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    opacity: 0;
+}
+
+.headingAnim0 {
+    animation: Carousel1 .8s ease-out 0s forwards;
+}
+
+.headingAnim1 {
+    animation: Carousel2 .8s ease-out 0s forwards;
+}
+
+.headingAnim2 {
+    animation: Carousel3 .8s ease-out 0s forwards;
+}
+
+
+@keyframes Carousel1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Carousel2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes Carousel3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+    }
+}

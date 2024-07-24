@@ -1,0 +1,89 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background-color: rgba(19, 61, 141, 1);
+    padding-block: 60px;
+}
+
+.navFooter {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.navLinks > p {
+    font-family: MainBold;
+    font-size: 16px;
+}
+
+.navLinks > ul {
+    list-style: none;
+}
+
+.navLinks > ul > li {
+    padding-top: 20px;
+}
+
+.navLinks > ul > li > a {
+    font-family: MainLight;
+    font-size: 15px;
+    word-spacing: 2px;
+    text-decoration: none;
+    color: white;
+}
+
+.navLinks > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.navContactDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+
+.addresses {
+    font-family: MainLight;
+    font-size: 15px;
+}
+
+.addresses > p {
+    width: 270px;
+    text-align: right;
+}
+
+.addresses > p:first-child {
+    padding-bottom: 15px;
+}
+
+
+
+.contacts {
+    font-family: MainBold;
+    font-size: 15px;
+}
+
+.contacts > p {
+    width: 270px;
+    text-align: right;
+}
+
+.contacts > p:first-child {
+    padding-bottom: 15px;
+}

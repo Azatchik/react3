@@ -1,0 +1,143 @@
+.servises {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.servisesTitle {
+    font-size: 35px;
+    font-family: MainBold;
+    color: rgba(51, 51, 51, 1);
+    text-align: left;
+    width: 70%;
+    padding-bottom: 80px;
+}
+
+.servisesPath {
+    display: flex;
+    color: rgba(51, 51, 51, 1);
+    text-align: left;
+    width: 70%;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.servisesPath > a {
+    font-size: 16px;
+    font-family: MainMedium;
+    text-decoration: none;
+    color: rgba(51, 51, 51, 1);
+}
+
+.servisesPath > a:hover {
+    text-decoration: underline;
+}
+
+.servisesPath > p {
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: MainMedium;
+}
+
+.servisesPath > p:before {
+    display: inline-block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    background-color: rgba(19, 61, 141, 1);
+    margin-right: 20px;
+}
+
+
+.servisesBody {
+    display: flex;
+    width: 70%;
+}
+
+.servisesBodyText {
+    color: rgba(51, 51, 51, 1);
+    width: 60%;
+    padding-right: 100px;
+}
+
+.servisesText {
+    font-size: 15px;
+    font-family: MainMedium;
+}
+
+.servisesSubtitle {
+    font-size: 21px;
+    font-family: MainBold;
+    padding-bottom: 40px;
+}
+
+
+.servisesBodyTextMain {
+    padding-left: 40px;
+    padding-block: 10px;
+    border-left: solid 4px red;
+    margin-bottom: 70px;
+}
+
+.servisesBodyTextMain > p:first-child {
+    padding-bottom: 20px;
+}
+
+
+.servisesBodyText1,
+.servisesBodyText2 {
+    padding-bottom: 50px;
+}
+
+.servisesBodyText2 > p:not(:first-child) {
+    padding-bottom: 20px;
+}
+
+.servisesBodyText3 > p:not(:first-child) {
+    padding-bottom: 20px;
+}
+
+.servisesBodyText2 > p:last-child,
+.servisesBodyText3 > p:last-child {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.servisesSidebar {
+    height: 620px;
+    width: 40%;
+    background-color: rgba(19, 61, 141, 1);
+    padding: 60px;
+    color: white;
+}
+
+.servisesSidebarTitle {
+    font-family: MainBold;
+    font-size: 20px;
+}
+
+.servisesSidebarGrid {
+    display: grid;
+    grid-template-rows: repeat(3, 130px);
+    grid-template-columns: repeat(2, 180px);
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.servisesSidebarDate > p:nth-child(1) {
+    font-family: MainBold;
+    font-size: 70px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+.arrowRight {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(19, 61, 141, 1);
+    border: 0;
+    outline: 0;
+}
+
+.arrowRight::after {
+    position: absolute;
+    content: '>';
+    color: white;
+    font-size: 20px;
+    display: inline;
+    right: 40%;
+    bottom: 30%;
+}
+
+.arrowRight:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.arrowRight:active {
+    transform: scale(0.95);
+}

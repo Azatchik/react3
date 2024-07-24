@@ -1,0 +1,70 @@
+
+
+
+.home,
+.home0,
+.home1,
+.home2 {
+    width: 100%;
+    height: 840px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.home {
+    background-image: url("../../../../assets/images/SectionHome/Ship3.jpg");
+}
+
+
+.home0 {
+    animation: Ship0 .8s ease-out 0s forwards;
+}
+.home1 {
+    animation: Ship1 .8s ease-out 0s forwards;
+}
+.home2 {
+    animation: Ship2 .8s ease-out 0s forwards;
+}
+
+
+
+@keyframes Ship0 {
+    from {
+        background-image: url("./../../../../assets/images/SectionHome/Ship3.jpg");
+    }
+    to {
+        background-image: url("./../../../../assets/images/SectionHome/Ship2.jpg");
+    }
+}
+
+@keyframes Ship1 {
+    from {
+        background-image: url("./../../../../assets/images/SectionHome/Ship2.jpg");
+    }
+    to {
+        background-image: url("./../../../../assets/images/SectionHome/Ship1.jpg");
+    }
+}
+
+@keyframes Ship2 {
+    from {
+        background-image: url("./../../../../assets/images/SectionHome/Ship1.jpg");
+    }
+    to {
+        background-image: url("./../../../../assets/images/SectionHome/Ship3.jpg");
+    }
+}
+
+
+
+.bgTransparent {
+    background-color: rgba(19, 61, 141, 0.55);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+

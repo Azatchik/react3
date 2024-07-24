@@ -1,0 +1,20 @@
+.transparentButton {
+    font-size: 18px;
+    font-family: MainBold;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: white;
+    padding: 13px 25px;
+    display: inline;
+    user-select: none;
+    text-decoration: none;
+    border: solid 1px white;
+}
+
+.transparentButton:hover {
+    cursor: pointer;
+}
+
+.transparentButton:active {
+    transform: scale(0.98);
+}
